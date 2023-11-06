@@ -1,10 +1,9 @@
 "use client";
-import React from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import Link from "next/link";
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const [user, setUser] = React.useState({
     name: "",
@@ -12,10 +11,10 @@ export default function page() {
     address: "",
     password: "",
   });
-  const [errors, setErrors] = React.useState({
+  const [errors, setErrors] = useState({
     error: "",
   });
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onRegister = async (e) => {
     e.preventDefault();

@@ -1,11 +1,11 @@
 "use client"
 import React from "react"
-import { useRouter } from "next/navigation"
+import { useRouter } from 'next/navigation'
 import axios from "axios"
 import toast from "react-hot-toast"
 import Link from "next/link"
 
-export default function page() {
+export default function Page() {
   
   const router = useRouter()
   const [user, setUser] = React.useState({
@@ -23,7 +23,6 @@ export default function page() {
     try {
       setLoading(true)
       const response = await axios.post('/api/users/login', user)
-      // console.log(response.data)
       
       if (response.status == 200) {
         toast.success('Login success')

@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Next Auth',
-  description: 'Make website authenticate using nextjs',
+  description: 'Website authenticate using nextjs',
 }
 
 export default function RootLayout({ children }) {
