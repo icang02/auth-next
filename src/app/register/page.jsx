@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Page() {
   const router = useRouter();
-  const [user, setUser] = React.useState({
+  const [user, setUser] = useState({
     name: "",
     email: "",
     address: "",
