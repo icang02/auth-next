@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import { useState } from "react"
 import { useRouter } from 'next/navigation'
 import axios from "axios"
 import toast from "react-hot-toast"
@@ -8,14 +8,14 @@ import Link from "next/link"
 export default function Page() {
   
   const router = useRouter()
-  const [user, setUser] = React.useState({
+  const [user, setUser] = useState({
     email: "",
     password: ""
   })
-  const [errors, setErrors] = React.useState({
+  const [errors, setErrors] = useState({
     error: ""
   })
-  const [loading, setLoading] = React.useState(false)
+  const [loading, setLoading] = useState(false)
 
   const onLogin = async (e) => {
     e.preventDefault()
