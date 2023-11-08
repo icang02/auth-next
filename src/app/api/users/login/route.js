@@ -28,7 +28,7 @@ export async function POST(request, response) {
 
     // create token
     const token = await jwt.sign(tokenData, process.env.SECRET_TOKEN, {
-      expiresIn: "1h" 
+      expiresIn: "1d" 
     })
 
     // set cookies token
